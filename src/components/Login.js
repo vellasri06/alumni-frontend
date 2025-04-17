@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5001/api/users/login", {
+      const response = await axios.get("https://alumni-backend-d8xp.onrender.com/api/login", {
         regNo,
         password,
       });
