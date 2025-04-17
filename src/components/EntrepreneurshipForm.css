@@ -1,0 +1,49 @@
+.entrepreneurship-form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffebcc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .entrepreneurship-form-container h2 {
+    color: #8a2be2;
+    margin-bottom: 20px;
+  }
+  
+  .entrepreneurship-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .entrepreneurship-form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .entrepreneurship-form-container button {
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .entrepreneurship-form-container button:hover {
+    background-color: #e64a19;
+  }
+  
+  .entrepreneurship-form-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+  }
+  

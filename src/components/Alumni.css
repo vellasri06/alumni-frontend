@@ -1,0 +1,95 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Search Bar */
+.search-bar {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* 🔹 Alumni Table */
+.alumni-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+.alumni-table th {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Table Cells */
+.alumni-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Alternate Row Colors */
+.alumni-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover Effect */
+.alumni-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+/* 🔹 Pagination */
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

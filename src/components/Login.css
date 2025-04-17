@@ -1,0 +1,160 @@
+/* Background with gradient */
+/* Apply background image directly to the login container */
+.login-container {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://content3.jdmagicbox.com/comp/guntur/u8/9999px863.x863.221229201921.e1u8/catalogue/vignan-university-guntur-universities-6RekzQOjo4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Centered login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Login box */
+.login-box {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* University Logo */
+.university-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+/* Heading */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Box around input fields */
+.input-group {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #4facfe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background: rgba(79, 172, 254, 0.1);
+}
+
+/* Input fields */
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+}
+
+/* Input placeholder color */
+.input-group input::placeholder {
+  color: #666;
+}
+
+/* Password Toggle Button */
+.toggle-password {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #3a9de8;
+}
+
+/* Forgot password link */
+.forgot-link {
+  font-size: 14px;
+  color: #4facfe;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Social Login Buttons */
+.social-login {
+  margin-top: 15px;
+}
+
+.google-login,
+.linkedin-login {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.google-login {
+  background: #db4437;
+}
+
+.google-login:hover {
+  background: #c1351d;
+}
+
+.linkedin-login {
+  background: #0077b5;
+}
+
+.linkedin-login:hover {
+  background: #005582;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

@@ -1,0 +1,29 @@
+/* Scoped styles for Job component */
+.job-list {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-list h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .job-card {
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    margin-bottom: 5px;
+  }
+  

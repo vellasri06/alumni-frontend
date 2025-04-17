@@ -1,0 +1,106 @@
+/* ✅ Modern and Animated Gallery Styles */
+.gallery-container {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    min-height: 100vh;
+    color: white;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* ✅ Image Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  /* ✅ Individual Image Card */
+  .gallery-item {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* ✅ Image Styling */
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ✅ Description Input */
+  .description-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .description-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .description-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* ✅ Upload Section */
+  .upload-section {
+    margin-top: 30px;
+  }
+  
+  .upload-btn {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .upload-btn:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+  }
+  
+  /* ✅ Error Message */
+  .error-message {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  

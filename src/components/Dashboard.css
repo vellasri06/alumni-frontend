@@ -1,0 +1,405 @@
+/* ========== Enhanced Dashboard Styling ========== */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #181818, #252525);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* Prevent overflow on the main container */
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  border-right: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .logo {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(255, 65, 108, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .logo:hover {
+  transform: scale(1.05);
+}
+
+.sidebar .nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar .nav-links li {
+  margin: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.sidebar .nav-links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #ff416c;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar .nav-links a:hover::before {
+  width: 100%;
+}
+
+.sidebar .nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(8px);
+  box-shadow: 0px 5px 10px rgba(255, 65, 108, 0.3);
+}
+
+/* ========== Main Content ========== */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  transition: margin-left 0.3s ease-in-out;
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #3b82f6 #252525; /* For Firefox */
+}
+
+/* WebKit browsers */
+.main-content::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #252525; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8; /* Darker color on hover */
+}
+
+/* ========== Top Bar ========== */
+.topbar {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.5s ease-in-out; /* Animation for top bar */
+}
+
+/* Cool animated text effect */
+.topbar h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f1c40f, #e67e22);
+  padding: 15px 30px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.4);
+  animation: pulseGlow 1.5s infinite alternate; /* Pulsing effect */
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.4);
+  }
+  to {
+    box-shadow: 0px 8px 25px rgba(255, 165, 0, 0.6);
+  }
+}
+
+/* ========== Dashboard Cards ========== */
+.dashboard-cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  padding: 25px;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in effect for cards */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card.blue {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.card.teal {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
+
+.card.yellow {
+  background: linear-gradient(135deg, #facc15, #eab308);
+}
+
+/* ========== Admin Button ========== */
+.admin-button {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.admin-button:hover {
+  background: linear-gradient(90deg, #1e40af, #1b3a9d);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 85, 204, 0.5);
+}
+
+/* ========== Latest Updates ========== */
+.updates {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  max-height: 200px; /* Limit height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #3b82f6 #252525; /* For Firefox */
+}
+
+.updates ul {
+  list-style: none;
+  padding: 0;
+}
+
+.updates li {
+  font-size: 16px;
+  color: #f1f1f1;
+  margin: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.updates li:hover {
+  color: #ffcc00; /* Highlight on hover */
+}
+
+/* WebKit browsers */
+.updates::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.updates::-webkit-scrollbar-track {
+  background: #252525; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.updates::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.updates::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8; /* Darker color on hover */
+}
+
+/* ========== Chat Button ========== */
+.chat-button {
+  background: #e94560;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.chat-button:hover {
+  background: #d83a54;
+  transform: scale(1.05);
+}
+
+/* ========== Chat Window ========== */
+.chat-window {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in effect for chat window */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Admin Profile Picture */
+.admin-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.admin-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+/* Main content container */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #252525;
+}
+
+/* Scrolling Caption */
+.scrolling-caption-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 10px 0;
+}
+
+.scrolling-caption {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollLeft 15s linear infinite;
+}
+
+/* Animation to scroll the caption */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Main content container */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #252525;
+}
+
+/* Scrolling Caption */
+.scrolling-caption-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #2e2e2e;
+  color: white;
+  padding: 10px 0;
+}
+
+.scrolling-caption {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollLeft 15s linear infinite;
+}
+
+/* Animation to scroll the caption */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
