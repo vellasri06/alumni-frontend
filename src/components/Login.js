@@ -11,24 +11,33 @@ const Login = () => {
   const navigate = useNavigate();
 
   const togglePassword = () => setPasswordVisible(!passwordVisible);
+  const backendURL = "https://alumni-backend-1-b38f.onrender.com"; // 🔁 Your live backend URL
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
+
+    // Frontend validation: Check if regNo matches password
+    if (regNo === password) {
+      alert("Frontend Login Successful!");
+      navigate("/dashboard"); // Redirect to dashboard on successful frontend login
+      return; // Skip the backend request if frontend validation is successful
+    }
 
     if (!regNo || !password) {
       setError("Both registration number and password are required.");
       return;
     }
 
+    // If frontend validation fails, proceed with backend validation
     try {
-      const response = await axios.get("https://alumni-backend-d8xp.onrender.com/api/login", {
+      const response = await axios.post(`${backendURL}/api/users/login`, {
         regNo,
         password,
       });
 
       if (response.status === 200) {
-        alert("Login Successful!");
+        alert("Backend Login Successful!");
         navigate("/dashboard"); // Redirect to dashboard on successful login
       }
     } catch (err) {

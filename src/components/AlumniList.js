@@ -7,10 +7,10 @@ const AlumniList = () => {
   const [selectedBatch, setSelectedBatch] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [newAlumni, setNewAlumni] = useState([]); // ✅ Store newly registered alumni
-
+  const backendURL = "https://alumni-backend-1-b38f.onrender.com";
   // 1️⃣ **Fetch Alumni Data**
   useEffect(() => {
-    fetch("http://localhost:5001/api/alumnis")
+    fetch(`${backendURL}/api/alumnis`)
       .then((res) => res.json())
       .then((data) => {
         console.log("✅ Fetched Alumni Data:", data);

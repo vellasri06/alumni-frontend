@@ -14,7 +14,7 @@ const PlacementForm = () => {
 
   const [message, setMessage] = useState("");
   const [refresh, setRefresh] = useState(false); // ✅ Fix: Declare refresh state
-
+  const backendURL = "https://alumni-backend-1-b38f.onrender.com";
   // Handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
