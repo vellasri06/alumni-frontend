@@ -10,7 +10,7 @@ const AlumniList = () => {
   const backendURL = "https://alumni-backend-1-b38f.onrender.com";
   // 1️⃣ **Fetch Alumni Data**
   useEffect(() => {
-    fetch(`${backendURL}/api/alumnis`)
+    fetch("http://localhost:5001/api/alumnis")
       .then((res) => res.json())
       .then((data) => {
         console.log("✅ Fetched Alumni Data:", data);
